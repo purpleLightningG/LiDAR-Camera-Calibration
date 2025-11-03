@@ -8,8 +8,8 @@ from pyapriltags import Detector
 from sklearn.cluster import DBSCAN
 
 # --- USER SETTINGS ---
-RGB_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/2025-08-01_15-15-52/rgb"
-PCD_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/2025-08-01_15-15-52/lidar"
+RGB_FOLDER    =
+PCD_FOLDER    = 
 SAVE_MATRIX   = "extrinsic_calibration_cube.txt"
 TAG_ID        = 8
 TAG_SIZE      = 0.10   # meters (10 cm)
@@ -219,4 +219,5 @@ def main():
     print(f"Saved calibration matrix to {SAVE_MATRIX}")
 
 if __name__ == "__main__":
+
     main()
