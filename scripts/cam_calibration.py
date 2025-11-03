@@ -22,7 +22,7 @@ import glob
 
 # ============================ CONFIG ============================
 
-IMAGES_DIR = 
+IMAGES_DIR = r"folder/to/rgb"
 CHECKERBOARD_DIMS = (7, 10)
 SQUARE_SIZE_METERS = 0.021  # adjust as needed
 IMAGE_EXTENSION = 'jpg'            # 'jpg', 'png', 'bmp', etc.
@@ -203,4 +203,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
