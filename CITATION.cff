@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: LiDAR–Camera Calibration Pipelines
+authors:
+  - family-names: Hossain
+    given-names: Shahriar
+version: 1.0.0
+date-released: 2025-11-03
+license: MIT
