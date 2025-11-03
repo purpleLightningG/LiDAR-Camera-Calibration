@@ -7,8 +7,8 @@ import open3d as o3d
 from pyapriltags import Detector
 
 # ─── USER SETTINGS (FOR SMALL TAG DATASET) ──────────────────────────────────
-RGB_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/12/rgb"
-PCD_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/12/lidar"
+RGB_FOLDER    = r""
+PCD_FOLDER    = r""
 TAG_ID        = 8
 TAG_SIZE      = 0.081   # meters (outer black square size)
 
@@ -203,4 +203,5 @@ def calibrate():
 
 if __name__=="__main__":
     calibrate()
+
 
