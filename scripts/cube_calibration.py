@@ -8,8 +8,8 @@ from pyapriltags import Detector
 from sklearn.cluster import DBSCAN
 
 # ─── USER SETTINGS ─────────────────────────────────────────────────────────────
-RGB_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/12/rgb"
-PCD_FOLDER    = r"C:/Users/Dream Team/Desktop/recorded_data/12/lidar"
+RGB_FOLDER    =
+PCD_FOLDER    = 
 TAG_ID        = 8
 TAG_SIZE      = 0.081   # meters (outer black square size)
 
@@ -421,3 +421,4 @@ def calibrate():
 
 if __name__=="__main__":
     calibrate()
+
