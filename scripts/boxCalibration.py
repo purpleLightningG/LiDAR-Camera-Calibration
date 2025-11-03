@@ -11,7 +11,7 @@ from sklearn.cluster import DBSCAN
 from scipy.optimize import least_squares   # NEW
 
 # ─── USER SETTINGS ─────────────────────────────────────────────────────────────
-RGB_FOLDER    = r"folder/to/rgb""
+RGB_FOLDER    = r"folder/to/rgb"
 PCD_FOLDER    = r"folder/to/pcd"
 TAG_ID        = 8
 TAG_SIZE      = 0.2   # meters 
@@ -592,5 +592,6 @@ def calibrate():
 
 if __name__=="__main__":
     calibrate()
+
 
 
