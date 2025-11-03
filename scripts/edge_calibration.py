@@ -8,8 +8,8 @@ from pyapriltags import Detector
 from sklearn.cluster import DBSCAN
 
 # --- USER SETTINGS ---
-RGB_FOLDER    =
-PCD_FOLDER    = 
+RGB_FOLDER    = r"folder/to/rgb"
+PCD_FOLDER    = r"folder/to/pcd"
 SAVE_MATRIX   = "extrinsic_calibration_cube.txt"
 TAG_ID        = 8
 TAG_SIZE      = 0.10   # meters (10 cm)
@@ -221,3 +221,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
