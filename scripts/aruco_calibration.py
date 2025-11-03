@@ -4,7 +4,7 @@ import open3d as o3d
 import os
 
 # --- CONFIGURATION ---
-DATA_PATH = "C:/Users/Dream Team/Desktop/recorded_data/2025-07-16_16-46-49"
+DATA_PATH = ""
 BOARD_WIDTH = 0.203   # A4 width in meters
 BOARD_HEIGHT = 0.267  # A4 height in meters
 ARUCO_ID = 0
@@ -189,3 +189,4 @@ if __name__ == "__main__":
     print(np.round(result.transformation, 4))
     np.savetxt("extrinsic_calibration.txt", result.transformation)
     print("\nMatrix saved to 'extrinsic_calibration.txt'")
+
