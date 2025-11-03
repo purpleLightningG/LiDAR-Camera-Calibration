@@ -8,9 +8,8 @@ Validation: reprojection error, point-to-pixel alignment overlays, and sanity-ch
 
 Consumption: ready-to-use outputs for ROS TF, Open3D, and downstream perception.
 
-✔️ The implementation code you provide will be kept exactly the same in logic; we only apply formatting/comments where helpful.
 
-Features
+Features:
 
 Checkerboard or AprilTag target support.
 
