@@ -1,0 +1,6 @@
+numpy
+opencv-python
+open3d
+pyapriltags
+scikit-learn
+scipy
