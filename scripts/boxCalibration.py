@@ -11,10 +11,10 @@ from sklearn.cluster import DBSCAN
 from scipy.optimize import least_squares   # NEW
 
 # ─── USER SETTINGS ─────────────────────────────────────────────────────────────
-RGB_FOLDER    = r""
-PCD_FOLDER    = r""
+RGB_FOLDER    = r"folder/to/rgb""
+PCD_FOLDER    = r"folder/to/pcd"
 TAG_ID        = 8
-TAG_SIZE      =    # meters 
+TAG_SIZE      = 0.2   # meters 
 
 # Camera intrinsics (pinhole K) — SAME device used for capture
 FX, FY = 935.93473508, 933.21525291
@@ -592,4 +592,5 @@ def calibrate():
 
 if __name__=="__main__":
     calibrate()
+
 
