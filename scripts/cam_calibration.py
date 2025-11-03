@@ -22,7 +22,7 @@ import glob
 
 # ============================ CONFIG ============================
 
-IMAGES_DIR = r'C:/Users/Dream Team/Desktop/recorded_data/camCal/'
+IMAGES_DIR = 
 CHECKERBOARD_DIMS = (7, 10)
 SQUARE_SIZE_METERS = 0.021  # adjust as needed
 IMAGE_EXTENSION = 'jpg'            # 'jpg', 'png', 'bmp', etc.
@@ -203,3 +203,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
