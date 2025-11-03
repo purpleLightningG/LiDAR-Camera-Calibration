@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - run: python -m pip install -U pip && pip install black ruff isort
+      - run: python -m pip install -U pip && pip install black==24.8.0 ruff isort
       - run: black --check .
       - run: ruff .
       - run: isort --check-only .
