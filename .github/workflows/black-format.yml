@@ -28,3 +28,4 @@ jobs:
             git push origin HEAD:main
           else
             echo "No changes to commit"
+          fi
