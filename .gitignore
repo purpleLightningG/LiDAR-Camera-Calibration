@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.egg-info/
+.ipynb_checkpoints/
+
+# Build/Logs
+outputs/
+logs/
+
+# Data (keep private until publish)
+examples/data/
+*.pcd
+*.ply
+*.bag
+*.png
+*.jpg
+
+# ROS
+devel/
+build/
+install/
+
+# Editors/OS
+.vscode/
+.DS_Store
