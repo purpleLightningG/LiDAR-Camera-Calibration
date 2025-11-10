@@ -141,7 +141,6 @@ def show_plane_result(pcd, plane_points):
     plane_pcd = o3d.geometry.PointCloud()
     plane_pcd.points = o3d.utility.Vector3dVector(plane_points)
     plane_pcd.paint_uniform_color([0, 1, 0])
-    rest_points = np.asarray(pcd.points)
     # For large clouds, this is "good enough" - show plane and all cloud
     o3d.visualization.draw_geometries(
         [pcd, plane_pcd], window_name="RANSAC Plane Detection"
@@ -226,5 +225,6 @@ if __name__ == "__main__":
     print(np.round(result.transformation, 4))
     np.savetxt("extrinsic_calibration.txt", result.transformation)
     print("\nMatrix saved to 'extrinsic_calibration.txt'")
+
 
 
