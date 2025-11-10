@@ -218,7 +218,7 @@ def sequential_ransac_planes(points, threshold, min_inliers, max_planes, iterati
 def extract_candidate_planes(pts):
     print(f"  ↳ DBSCAN(eps={DBSCAN_EPS}, min_samples={DBSCAN_MIN_SAM})…")
     labels = DBSCAN(eps=DBSCAN_EPS, min_samples=DBSCAN_MIN_SAM).fit_predict(pts)
-    clusters = [pts[labels == l] for l in set(labels) if l != -1]
+    clusters = [pts[labels == label_id] for label_id in set(labels) if label_id != -1]
     print(f"    • {len(clusters)} clusters")
     cands = []
     for i, cl in enumerate(clusters):
@@ -413,7 +413,7 @@ def calibrate():
                 )
                 if max(obb.extent) < CUBE_SIDE * 2:
                     filtered.append((n_l, d_l, inl))
-            except:
+            except Exception:
                 pass
         print(f" → {len(filtered)} cube‐sized candidates")
         if not filtered:
@@ -472,3 +472,4 @@ def calibrate():
 
 if __name__ == "__main__":
     calibrate()
+
