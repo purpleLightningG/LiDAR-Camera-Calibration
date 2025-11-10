@@ -282,7 +282,7 @@ def visualize_all_planes(full_pcd, cands):
             obb.color = rgb
             vis.add_geometry(obb)
             label_pos = obb.get_center()
-        except:
+        except Exception:
             label_pos = inl.mean(axis=0)
 
         try:
@@ -472,4 +472,5 @@ def calibrate():
 
 if __name__ == "__main__":
     calibrate()
+
 
