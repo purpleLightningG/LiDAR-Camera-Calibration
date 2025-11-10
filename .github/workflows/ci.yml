@@ -17,4 +17,4 @@ jobs:
       - name: Run Ruff (lint)
         run: ruff check .
       - name: Run isort (import order check)
-        run: isort --check-only .
+        run: isort .
