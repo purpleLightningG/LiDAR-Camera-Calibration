@@ -30,5 +30,4 @@ python -m venv .venv && source .venv/bin/activate
 pip install -U pip wheel
 pip install -r requirements.txt
 
-# Set your private dataset paths inside the scripts (RGB/PCD/DATA_PATH)
-python scripts/smallCubeCal.py
+## Set your private dataset paths inside the scripts (RGB/PCD/DATA_PATH)
