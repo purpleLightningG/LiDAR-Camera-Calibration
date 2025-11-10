@@ -225,7 +225,7 @@ def sequential_ransac_planes(points, threshold, min_inliers, max_planes, iterati
 def extract_candidate_planes(pts):
     print(f"  ↳ DBSCAN(eps={DBSCAN_EPS}, min_samples={DBSCAN_MIN_SAM})…")
     labels = DBSCAN(eps=DBSCAN_EPS, min_samples=DBSCAN_MIN_SAM).fit_predict(pts)
-    clusters = [pts[labels == l] for l in set(labels) if l != -1]
+    clusters = [pts[labels == label_id] for l in set(labels) if label_id != -1]
     print(f"    • {len(clusters)} clusters")
     cands = []
     for i, cl in enumerate(clusters):
@@ -362,7 +362,7 @@ def visualize_all_planes(full_pcd, cands):
 
         try:
             vis.add_3d_label(label_pos, f"{idx}:{name}")
-        except AttributeError:
+        except Exception AttributeError:
             sph = o3d.geometry.TriangleMesh.create_sphere(radius=0.005)
             sph.translate(label_pos)
             sph.paint_uniform_color(rgb)
@@ -470,7 +470,7 @@ def calibrate():
         cv2.line(draw, tuple(p0), tuple(pY), (0, 255, 0), 2)
         cv2.line(draw, tuple(p0), tuple(pZ), (0, 0, 255), 2)
 
-        Z_pix = (K[0, 0] * TAG_SIZE / px_side) if px_side > 1e-6 else float("nan")
+        # Z_pix = (K[0, 0] * TAG_SIZE / px_side) if px_side > 1e-6 else float("nan")
         overlay = (
             f"{name}.jpg | H-decomp: |t|={Z_center:.3f} m   "
             f"|d|={Z_plane:.3f} m   RMS={rms:.2f} px   "
@@ -673,3 +673,4 @@ def calibrate():
 
 if __name__ == "__main__":
     calibrate()
+
