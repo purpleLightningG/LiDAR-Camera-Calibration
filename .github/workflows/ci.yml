@@ -15,6 +15,6 @@ jobs:
       - name: Run Black (auto-format)
         run: black .
       - name: Run Ruff (lint)
-        run: ruff .
+        run: ruff check .
       - name: Run isort (import order check)
         run: isort --check-only .
