@@ -223,13 +223,14 @@ def sequential_ransac_planes(points, threshold, min_inliers, max_planes, iterati
 
 
 def extract_candidate_planes(pts):
-    print(f"  ↳ DBSCAN(eps={DBSCAN_EPS}, min_samples={DBSCAN_MIN_SAM})…")
+    print(f" ↳ DBSCAN(eps={DBSCAN_EPS}, min_samples={DBSCAN_MIN_SAM})…")
     labels = DBSCAN(eps=DBSCAN_EPS, min_samples=DBSCAN_MIN_SAM).fit_predict(pts)
-    clusters = [pts[labels == label_id] for l in set(labels) if label_id != -1]
-    print(f"    • {len(clusters)} clusters")
+    clusters = [pts[labels == label_id] for label_id in set(labels) if label_id != -1]
+    print(f" • {len(clusters)} clusters")
+
     cands = []
     for i, cl in enumerate(clusters):
-        print(f"    Cluster{i}: {len(cl)} pts", end=" → ")
+        print(f"  Cluster{i}: {len(cl)} pts", end=" → ")
         if len(cl) < 30:
             print("skip")
             continue
@@ -238,6 +239,7 @@ def extract_candidate_planes(pts):
         for (n, d), inl in planes:
             cands.append((n, d, inl))
     return cands
+
 
 
 # --- Robust face-size estimation on a plane (convex hull + minAreaRect + PCA fallback)
@@ -357,12 +359,12 @@ def visualize_all_planes(full_pcd, cands):
             obb.color = rgb
             vis.add_geometry(obb)
             label_pos = obb.get_center()
-        except:
+        except Exception:
             label_pos = inl.mean(axis=0)
 
         try:
             vis.add_3d_label(label_pos, f"{idx}:{name}")
-        except Exception AttributeError:
+        except Exception:
             sph = o3d.geometry.TriangleMesh.create_sphere(radius=0.005)
             sph.translate(label_pos)
             sph.paint_uniform_color(rgb)
@@ -673,4 +675,5 @@ def calibrate():
 
 if __name__ == "__main__":
     calibrate()
+
 
