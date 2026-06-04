@@ -6,6 +6,9 @@ This repo packages practical, field-tested LiDAR–camera calibration scripts an
 - **Validation**: Reprojection error, point-to-pixel alignment overlays, and sanity-check visualizations.
 - **Consumption**: Ready-to-use outputs for ROS TF, Open3D, and downstream perception.
 
+<p align="center">
+  <img src="assets/architecture.svg" alt="Pipeline architecture" width="850"/>
+</p>
 ---
 
 ## Features
