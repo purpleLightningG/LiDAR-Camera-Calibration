@@ -7,7 +7,7 @@ This repo packages practical, field-tested LiDAR–camera calibration scripts an
 - **Consumption**: Ready-to-use outputs for ROS TF, Open3D, and downstream perception.
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Pipeline architecture" width="850"/>
+  <img src="assets/architecture.svg" alt="Pipeline architecture" width="500"/>
 </p>
 ---
 
