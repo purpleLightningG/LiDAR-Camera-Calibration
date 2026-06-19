@@ -10,6 +10,13 @@ This repo packages practical, field-tested LiDAR–camera calibration scripts an
   <img src="assets/architecture.svg" alt="Pipeline architecture" width="500"/>
 </p>
 ---
+<p align="center">
+  <img src="assets/overlay_final_nudged.png" alt="LiDAR points projected onto camera image after calibration" width="800"/>
+</p>
+
+<p align="center">
+  <i>LiDAR point cloud projected onto RGB image using the estimated extrinsic calibration — points colored by depth (blue = near, yellow = far).</i>
+</p>
 
 ## Features
 - Checkerboard **or** AprilTag target support.  
